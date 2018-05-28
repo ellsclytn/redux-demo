@@ -14,6 +14,8 @@ const todos = (state = [], action) => {
       return Object.assign([...state], {
         [action.payload]: { ...todo, completed: !todo.completed }
       })
+    case 'UPDATE_TODOS':
+      return action.payload
     default:
       return state
   }
